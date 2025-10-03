@@ -1,0 +1,5 @@
+{
+  "name": "BCA Tutor AI",
+  "description": "An AI-powered tutor designed to help Bachelor of Computer Applications (BCA) students understand computer science, programming, and IT concepts by generating exam-ready notes based on user questions and specified marks.",
+  "requestFramePermissions": []
+}
