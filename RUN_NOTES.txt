@@ -1,0 +1,75 @@
+========================================================================
+                      BCA TUTOR AI - RUN & INSTALLATION NOTES
+========================================================================
+
+This document provides step-by-step instructions to install, configure,
+and run the BCA Tutor AI project on your local machine.
+
+------------------------------------------------------------------------
+PREREQUISITES
+------------------------------------------------------------------------
+Ensure you have the following installed on your system:
+1. Node.js (version 18.0.0 or higher is recommended)
+   - Download link: https://nodejs.org/
+2. npm (Node Package Manager, usually comes pre-packaged with Node.js)
+3. A modern web browser (Google Chrome, Firefox, Safari, Edge, etc.)
+4. Internet connection (required for downloading packages and accessing
+   Google Sign-In + Gemini API)
+
+------------------------------------------------------------------------
+STEP-BY-STEP INSTALLATION & RUN GUIDE
+------------------------------------------------------------------------
+
+STEP 1: Install Dependencies
+  Open your terminal/command prompt, navigate to the project directory
+  (where package.json is located), and run:
+  
+  npm install
+
+STEP 2: Set Up Environment Variables (Optional but recommended)
+  - The application has a `.env.local` file in the root directory.
+  - Open `.env.local` and replace the placeholder API key with your
+    actual Gemini API Key if you want to set it globally:
+    
+    GEMINI_API_KEY=your_actual_gemini_api_key_here
+    
+  - Note: If you don't set it in `.env.local`, the application will
+    safely prompt you to enter your Gemini API Key directly inside the 
+    user interface after logging in, and it will be stored securely 
+    in your browser's local storage.
+
+STEP 3: Start the Development Server
+  Run the following command to boot up the application:
+  
+  npm run dev
+
+STEP 4: Access the Application
+  Once the server is running, open your web browser and navigate to:
+  
+  http://localhost:5173/
+
+------------------------------------------------------------------------
+TROUBLESHOOTING
+------------------------------------------------------------------------
+
+* Google Sign-In fails to load or shows an initialization error:
+  - Google Sign-In requires an active internet connection to load 
+    the external client library (https://accounts.google.com/gsi/client).
+  - Ensure you are not blocking third-party scripts via browser extensions 
+    (e.g., uBlock, AdBlock, or strict Privacy settings).
+  - Try performing a hard refresh (Ctrl+Shift+R on Windows/Linux or 
+    Cmd+Shift+R on macOS).
+
+* Gemini API Error (e.g. invalid API Key):
+  - Ensure your API key has access to Gemini model endpoints.
+  - You can change or update your API Key at any time inside the app by 
+    clicking on the profile settings icon in the top right.
+
+* Vite dev server port conflict:
+  - If port 5173 is already in use by another application, Vite will 
+    automatically start on another port (e.g., 5174). Check the terminal 
+    output for the exact URL.
+
+========================================================================
+Enjoy using BCA Tutor AI!
+========================================================================
